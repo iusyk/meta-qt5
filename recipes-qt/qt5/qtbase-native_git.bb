@@ -36,9 +36,6 @@ SRC_URI += "\
     file://0015-corelib-Include-sys-types.h-for-uint32_t.patch \
     file://0016-Define-QMAKE_CXX.COMPILER_MACROS-for-clang-on-linux.patch \
     file://0018-tst_qpainter-FE_-macros-are-not-defined-for-every-pl.patch \
-    file://0019-Define-__NR_futex-if-it-does-not-exist.patch \
-    file://0020-Revert-Fix-workaround-in-pthread-destructor.patch \
-    file://0021-qfloat16-Include-limits-header.patch \
 "
 
 # common for qtbase-native and nativesdk-qtbase
@@ -144,4 +141,4 @@ do_install() {
     echo 'set(_qt5_corelib_extra_includes "${_qt5Core_install_prefix}/lib${QT_DIR_NAME}/mkspecs/linux-oe-g++")' > ${D}${libdir}/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake
 }
 
-SRCREV = "40143c189b7c1bf3c2058b77d00ea5c4e3be8b28"
+SRCREV = "e4961b35deb202525d4711dbb14f8c2bb0bf5c26"

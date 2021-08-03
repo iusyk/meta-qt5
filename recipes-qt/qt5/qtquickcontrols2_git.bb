@@ -10,6 +10,4 @@ LIC_FILES_CHKSUM = " \
 
 DEPENDS += "qtdeclarative qtdeclarative-native"
 
-SRC_URI += "file://0001-Revert-Get-the-scale-of-the-popup-item-when-setting-.patch"
-
-SRCREV = "16f27dfa3588c2bf377568ce00bf534af48c9558"
+SRCREV = "c0daab494a58ff881afc0252872359e5291a1478"

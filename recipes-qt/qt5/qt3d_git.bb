@@ -16,8 +16,6 @@ DEPENDS_class-target += "qtdeclarative qt3d-native"
 SRC_URI += " \
     file://0001-Allow-a-tools-only-build.patch \
 "
-SRC_URI_append_riscv64 = " file://0001-renderers-opengl-Link-in-libatomic-on-riscv.patch"
-SRC_URI_append_riscv32 = " file://0001-renderers-opengl-Link-in-libatomic-on-riscv.patch"
 
 PACKAGECONFIG ??= ""
 PACKAGECONFIG_class-native ??= "tools-only"
@@ -38,6 +36,6 @@ do_configure_prepend() {
          ${S}/src/quick3d/imports/input/importsinput.pro
 }
 
-SRCREV = "34171b1d99f55fde1627df3c57eed50480ab2ae7"
+SRCREV = "dc26105a3abe6fe420151fd3f1b228835d2088ed"
 
 BBCLASSEXTEND += "native nativesdk"

@@ -20,7 +20,7 @@ SRC_URI += "file://0001-tst_seatv4-Include-array.patch"
 PACKAGECONFIG ?= " \
     wayland-client \
     wayland-server \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl wayland', 'wayland-egl', '', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'wayland-egl', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xcomposite-egl xcomposite-glx', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'wayland-vulkan-server-buffer', '', d)} \
 "
@@ -43,7 +43,7 @@ PACKAGECONFIG[wayland-vulkan-server-buffer] = "-feature-wayland-vulkan-server-bu
 
 EXTRA_QMAKEVARS_CONFIGURE += "${PACKAGECONFIG_CONFARGS}"
 
-SRCREV = "3cc17177b1b03053276eb6236fda137c588261a7"
+SRCREV = "c25f8b8fa4dc6d096382d34849b997ab7fe69c5c"
 
 BBCLASSEXTEND =+ "native nativesdk"
 
